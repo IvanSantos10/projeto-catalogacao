@@ -20,6 +20,13 @@ $factory->define(Projeto\Entities\User::class, function (Faker\Generator $faker)
     ];
 });
 
+$factory->define(Projeto\Entities\Item::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->name,
+        'description' => $faker->sentence
+    ];
+});
+
 $factory->define(Projeto\Entities\Catalogacao::class, function (Faker\Generator $faker) {
     return [
         'nome_especie' => $faker->name,

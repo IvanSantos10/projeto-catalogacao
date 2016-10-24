@@ -4,21 +4,16 @@ namespace Projeto\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Projeto\Repositories\CatalogacaoRepository;
-use Projeto\Entities\Catalogacao;
-use Projeto\Validators\CatalogacaoValidator;
+use Projeto\Repositories\ItemRepository;
+use Projeto\Entities\Item;
+use Projeto\Validators\ItemValidator;
 
 /**
- * Class CatalogacaoRepositoryEloquent
+ * Class ItemRepositoryEloquent
  * @package namespace Projeto\Repositories;
  */
-class CatalogacaoRepositoryEloquent extends BaseRepository implements CatalogacaoRepository
+class ItemRepositoryEloquent extends BaseRepository implements ItemRepository
 {
-	
-	protected $fieldSearchable = [
-        'nome_especie'  => 'like',
-        'nome_vernaculare'  => 'like'
-    ];
     /**
      * Specify Model class name
      *
@@ -26,7 +21,7 @@ class CatalogacaoRepositoryEloquent extends BaseRepository implements Catalogaca
      */
     public function model()
     {
-        return Catalogacao::class;
+        return Item::class;
     }
 
     

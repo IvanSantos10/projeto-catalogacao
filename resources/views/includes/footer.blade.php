@@ -7,15 +7,11 @@
                 </li>
                 <li class="footer-menu-divider">&sdot;</li>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#Serviços">Services</a>
                 </li>
                 <li class="footer-menu-divider">&sdot;</li>
                 <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li class="footer-menu-divider">&sdot;</li>
-                <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#Contato">Contact</a>
                 </li>
             </ul>
             <p class="copyright text-muted small">Copyright &copy; Plantas Medicinais {{ date("Y") }}. Todos os Direitos Reservados</p>

@@ -1,18 +1,19 @@
+if($('#search').html()) {
+    var page = 1;
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() >= (parseInt($(document).height()) - parseInt($('footer').height() * 5))) {
 
-var page = 1;
-$(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height()  >= (parseInt($(document).height()) - parseInt($('footer').height() * 5)) ) {
-        ///alert($(window).scrollTop() + $(window).height() + $('footer').height() +' >= '+ (parseInt($(document).height()) - parseInt($('footer').height() *5)))
-        page++;
-        loadMoreData(page);
-    }
-});
+            page++;
+            loadMoreData(page);
+        }
+    });
+}
 
 function loadMoreData(page){
-
+    search = $('.col-lg-10').data('search');
     $.ajax(
         {
-            url: '?page=' + page,
+            url: '?search='+search+'&page=' + page,
             type: "get",
             beforeSend: function()
             {

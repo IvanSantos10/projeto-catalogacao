@@ -224,7 +224,7 @@ class CatalogacaoController extends Controller
 
         $img = Image::make($image->getRealPath());
 
-        $img->resize(100, 100, function ($constraint) {
+        $img->resize(200, 200, function ($constraint) {
 
             $constraint->aspectRatio();
 

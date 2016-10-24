@@ -4,7 +4,7 @@
             <img class="img-responsive" src="{{ asset("images/thumbnail/$Catalogacao->foto") }}" alt="">
 
         </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10" data-search="{{ $search }}">
             <h3><a href="">{{ $Catalogacao->nome_especie }}</a></h3>
             <p>{{ str_limit($Catalogacao->Infor_etnofarmacologica, 400) }}</p>
         </div>
@@ -16,7 +16,5 @@
             @endif
         </div>
         <hr style="margin:5px;">
-
-
     </div>
 @endforeach
